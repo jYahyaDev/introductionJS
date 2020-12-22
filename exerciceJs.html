@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercice</title>
+  </head>
+  <body>
+    <script>
+      //Exercice 1
+
+      let a = 0;
+      while (a < 10) {
+        a++;
+        console.log(a);
+      }
+
+      //Exercice 2
+      let b = 0;
+      let c = 10;
+      while (b < 20) {
+        console.log(b * c);
+        b++;
+        console.log(b);
+      }
+
+      //Exercice 3
+      let d = 100;
+      let e = 10;
+      while (d > 10) {
+        console.log(d * e);
+        d--;
+        console.log(d);
+      }
+
+      //Exercice 4
+      let f = 1;
+
+      while (f < 10) {
+        f += f / 2;
+        console.log(f);
+      }
+
+      //Exercice 5
+      for (let g = 1; g <= 15; g++) {
+        console.log('On y arrive presque');
+      }
+
+      //Exercice 6
+      for (let h = 20; h > 0; h--) {
+        console.log("C'est presque bon");
+      }
+
+      //Exercice 7
+      for (let i = 1; i < 100; i += 15) {
+        console.log('On tient le bon bout...');
+      }
+      //Exercice 8
+      for (let j = 200; j > 0; j -= 12) {
+        console.log('Enfin');
+      }
+
+      /****Function*****/
+
+      //Exercice 1
+
+      let vrai = function () {
+        return true;
+      };
+
+      //Exercice 2
+
+      let caractere = (chaine) => {
+        return chaine;
+      };
+      console.log(caractere('test')); //ok
+
+      //Exercice 3
+      let conca = (chaine1, chaine2) => {
+        return chaine1 + chaine2;
+      };
+      console.log(conca('ffef', 'efef')); //ok
+
+      //Exercice 4
+      let nbre = (nbr1, nbr2) => {
+        if (nbr1 > nbr2) {
+          return nbr1 + 'est plus grand';
+        } else if (nbr2 > nbr1) {
+          return nbr2 + 'est plus grand';
+        } else if (nbr1 == nbr2) {
+          return 'égalité';
+        }
+      };
+
+      //Exercice 5
+
+      function concaChiffre(nbr, chaine3) {
+        return nbr + chaine3;
+      }
+
+      //Exercice 6
+
+      let para3 = (nom, prenom, age) => {
+        return `Bonjour ${nom} ${prenom} tu as ${age}ans`;
+      };
+
+      //Exercice 7
+
+      let ageAdulte = (age, genre = [homme, femme]) => {
+        if (age >= 18 && genre == 'homme') {
+          console.log('Vous êtes un homme adulte');
+        } else if (age < 18 && genre == 'homme') {
+          console.log('Vous êtes un homme mineur');
+        } else if (age >= 18 && genre == 'femme') {
+          console.log('Vous êtes une femme adulte');
+        } else if (age < 18 && genre == 'femme') {
+          console.log('Vous êtes un femme mineur');
+        }
+      };
+
+      //Exercice 8
+
+      let numberDefault = (y = 1, t = 2, v = 5) => {
+        return y + t + v;
+      };
+
+      // TABLEAU
+
+      //Exercice 1
+
+      let moisAnnee = [
+        'janvier',
+        'fevrier',
+        'mars',
+        'avril',
+        'mai',
+        'juin',
+        'juillet',
+        'aout',
+        'Septembre',
+        'octobre',
+        'novembre',
+        'decembre',
+      ];
+
+
+
+      //Exercice 2
+      console.log(moisAnnee[2]); //mars
+
+      //Exercice 3
+      console.log(moisAnnee[5]); //
+
+      //Exercice 4
+      moisAnnee[7] = 'août';
+
+      //Exercice 5
+
+      let tableDep = new Array();
+      tableDep[59] = 'Nord';
+      tableDep[02] = 'aisne';
+      tableDep[60] = 'Oise';
+      tableDep[62] = 'Pas-de-calais';
+      tableDep[80] = 'Somme';
+
+      // Exercice 6
+
+      console.log(tableDep[59]);
+
+      // Exercice 7
+
+      tableDep.push((tableDep[51] = 'Reims'));
+      console.log(tableDep[51]);
+
+      // Exercice 8
+
+      for (affiche of moisAnnee) {
+        console.log(affiche);
+      }
+
+      //Exercice 9
+
+      tableDep.forEach((ok) => {
+        console.log(ok);
+      });
+
+      //Exercice 10
+
+      tableDep.forEach((p, index) => {
+        console.log(`le departement ${p} à le numero ${index}`);
+      });
+    </script>
+  </body>
+</html>
